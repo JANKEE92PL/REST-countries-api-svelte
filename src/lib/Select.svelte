@@ -18,7 +18,7 @@
 </script>
 
 
-<div class="select">
+<div class="select has-shadow">
     <select bind:value={selected} on:change="{() => alert(selected)}">
         <option disabled>Filter by Region</option>
         {#each regions as region}

@@ -14,7 +14,7 @@
     }
 </script>
 
-<div class="field is-4">
+<div class="field is-4 has-shadow">
     <p class="control has-icons-left">
         <input bind:value={searchKeyword} on:keypress={onKeyPress} class="input" type="text"
                placeholder="Search for a country...">
