@@ -10,7 +10,7 @@
     </div>
     <div class="navbar-end">
         <div class="navbar-item">
-            <div on:click={()=>$darkMode=!$darkMode} class="field is-grouped button is-light">
+            <div on:click={()=>$darkMode=!$darkMode} class={$darkMode ? "field is-grouped button  is-dark ":"field is-grouped button is-light"}>
                 <div class="icon"><i class={$darkMode ? 'fa-solid fa-moon' : 'fa-regular fa-moon'}></i></div>
                 <span>Darkmode</span>
             </div>

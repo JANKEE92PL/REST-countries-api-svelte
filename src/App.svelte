@@ -7,6 +7,7 @@
     import {darkMode} from "./stores.js";
 
 </script>
+
 <div class={$darkMode ? 'has-background-black-ter' : 'has-background-light has-shadow is-white'}>
     <Navbar/>
 
@@ -15,6 +16,6 @@
             <Search/>
             <Select/>
         </div>
-<!--            <Card />-->
+            <Card />
     </main>
 </div>
