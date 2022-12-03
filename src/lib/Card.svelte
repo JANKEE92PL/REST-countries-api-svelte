@@ -1,13 +1,6 @@
 <script>
 
-    import {darkMode} from "../stores.js";
-
-    let url = "https://restcountries.com/v3.1/"
-    const getCountries = async () => {
-        let countries = await fetch(url + "all").then(res => res.json())
-        return countries
-    }
-    let countries = getCountries();
+    import {countries, darkMode} from "../stores.js";
 
 </script>
 
