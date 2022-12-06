@@ -4,7 +4,9 @@
     import Navbar from "./lib/Navbar.svelte";
     import Search from "./lib/Search.svelte";
     import Select from "./lib/Select.svelte";
-    import {darkMode} from "./stores.js";
+    import {countries, darkMode} from "./stores.js";
+
+    let selected;
 
 </script>
 
@@ -14,8 +16,8 @@
     <main class="container">
         <div class="is-flex is-justify-content-space-between py-4">
             <Search/>
-            <Select/>
+            <Select {selected}/>
         </div>
-            <Card />
+        <Card {countries}/>
     </main>
 </div>

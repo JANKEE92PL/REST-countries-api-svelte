@@ -1,7 +1,7 @@
 <script>
-    import {darkMode} from "../stores.js";
+    import {countries, darkMode} from "../stores.js";
 
-    let selected;
+    export let selected;
 
     let answer = '';
 
@@ -14,14 +14,21 @@
     ];
 
     const filterBySelectbox = (choice) => {
-
+        $countries.then((data) => data.filter((item) => {
+            let continent = item.continents[0] == choice;
+            console.log(continent)
+            return continent
+        }))
+        console.log(choice)
+        selected = choice
     }
 
 </script>
 
 
 <div class="select has-shadow">
-    <select class={$darkMode ? 'is-black has-background-grey-darker has-text-white' : 'has-shadow is-white'} bind:value={selected} on:change="{() => alert(selected)}">
+    <select class={$darkMode ? 'is-black has-background-grey-darker has-text-white' : 'has-shadow is-white'}
+            bind:value={selected} on:change="{() => filterBySelectbox(selected)}">
         <option disabled>Filter by Region</option>
         {#each regions as region}
             <option value={region}>

@@ -1,15 +1,22 @@
 <script>
 
-    import {countries, darkMode} from "../stores.js";
+    import {country, darkMode} from "../stores.js";
+
+    export let countries;
+
 
 </script>
+{#if $country}
+    <p>Searched Country: ..loading - {$country}</p>
+{:else}
 
+{/if}
 {#await countries}
     <p>...waiting</p>
     <progress class="progress is-large is-info" max="100"></progress>
 {:then countries}
     <div class="columns is-multiline">
-        {#each countries as country, index }
+        {#each countries  as country, index }
             <div class="column is-3">
                 <div class="card">
                     <div class="card-image">
