@@ -1,11 +1,14 @@
 <script>
-    import {country, getCountry, darkMode} from "../stores.js";
+    import {getCountry, darkMode} from "../stores.js";
 
     let searchKeyword;
+    let country;
 
-    const onKeyPress = (e) => {
+    const onKeyPress = async (e) => {
         if (e.key === 'Enter') {
-            $country = getCountry(e.target.value);
+            let res = await getCountry(e.target.value);
+            let data = await res
+            return alert(data)
         }
     }
 </script>

@@ -1,16 +1,11 @@
 <script>
 
-    import {country, darkMode} from "../stores.js";
-
-    export let countries;
+    import {countries, darkMode} from "../stores.js";
 
 
 </script>
-{#if $country}
-    <p>Searched Country: ..loading - {$country}</p>
-{:else}
 
-{/if}
+
 {#await countries}
     <p>...waiting</p>
     <progress class="progress is-large is-info" max="100"></progress>
